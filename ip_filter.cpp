@@ -1,25 +1,8 @@
 #include <iostream>
-#include <fstream>
-#include <sstream>
 #include <vector>
-#include <string>
-#include <array>
+
 #include <algorithm>
-
-struct IP {
-    std::array<int, 4> octets;
-    bool operator<(const IP& other) const {
-        return octets < other.octets;
-    }
-};
-
-IP parse_ip(const std::string& s) {
-    IP ip{};
-    char dot;
-    std::istringstream iss(s);
-    iss >> ip.octets[0] >> dot >> ip.octets[1] >> dot >> ip.octets[2] >> dot >> ip.octets[3];
-    return ip;
-}
+#include "lib.h"
 
 int main(int , char **)
 {

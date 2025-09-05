@@ -5,6 +5,7 @@ find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 set(TEST_SOURCES
     test_version.cpp
     test_exact_version.cpp
+    test_ip.cpp
 )
 
 find_package(OpenSSL REQUIRED)
