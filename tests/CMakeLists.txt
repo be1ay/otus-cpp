@@ -6,11 +6,8 @@ set(TEST_SOURCES
     test_version.cpp
     test_exact_version.cpp
     test_ip.cpp
+    test_myallocator.cpp
 )
-
-find_package(OpenSSL REQUIRED)
-#target_link_libraries(test_md5 PRIVATE OpenSSL::SSL OpenSSL::Crypto)
-
 
 foreach(test_src ${TEST_SOURCES})
     get_filename_component(test_name ${test_src} NAME_WE)
