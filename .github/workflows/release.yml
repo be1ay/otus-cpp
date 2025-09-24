@@ -40,3 +40,17 @@ jobs:
           asset_path: ./print_ip-0.0.${{ github.run_number }}-Linux.deb
           asset_name: print_ip-0.0.${{ github.run_number }}-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
+  docs:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Doxygen
+        run: sudo apt-get update && sudo apt-get install doxygen graphviz -y
+      - name: Generate Doxygen Documentation
+        run: doxygen Doxyfile
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/html 
