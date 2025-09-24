@@ -7,6 +7,7 @@ set(TEST_SOURCES
     test_exact_version.cpp
     test_ip.cpp
     test_myallocator.cpp
+    test_print_ip.cpp
 )
 
 foreach(test_src ${TEST_SOURCES})
@@ -29,7 +30,7 @@ foreach(test_src ${TEST_SOURCES})
 
     target_link_libraries(${test_name}
         ${Boost_LIBRARIES}
-        helloworld
+        homework
     )
 
     add_test(NAME ${test_name} COMMAND ${test_name})
