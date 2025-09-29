@@ -1,11 +1,9 @@
 var indexSectionsWithContent =
 {
-  0: "abcdefilmoprsuv~",
-  1: "fimrs",
-  2: "ilmp",
-  3: "abcdefimopsv~",
-  4: "bcopu",
-  5: "dioprv"
+  0: "imp",
+  1: "i",
+  2: "p",
+  3: "mp"
 };
 
 var indexSectionNames =
@@ -13,9 +11,7 @@ var indexSectionNames =
   0: "all",
   1: "classes",
   2: "files",
-  3: "functions",
-  4: "variables",
-  5: "typedefs"
+  3: "functions"
 };
 
 var indexSectionLabels =
@@ -23,8 +19,6 @@ var indexSectionLabels =
   0: "All",
   1: "Classes",
   2: "Files",
-  3: "Functions",
-  4: "Variables",
-  5: "Typedefs"
+  3: "Functions"
 };
 
