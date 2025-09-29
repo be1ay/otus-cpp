@@ -2,7 +2,7 @@
 #include <vector>
 
 #include <algorithm>
-#include "lib.h"
+#include "../lib.h"
 
 int main(int , char **)
 {
@@ -124,3 +124,5 @@ int main(int , char **)
 
     return 0;
 }
+
+
