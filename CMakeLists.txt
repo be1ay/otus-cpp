@@ -18,8 +18,8 @@ add_subdirectory(hw3_allocator)
 add_subdirectory(hw4_print_ip)
 add_subdirectory(hw5_editor)
 
-add_library(homework lib.cpp ../hw5_editor/controller.cpp
-                             ../hw5_editor/document.cpp)
+add_library(homework lib.cpp hw5_editor/controller.cpp
+                             hw5_editor/document.cpp)
 
 target_include_directories(homework
     PRIVATE "${CMAKE_BINARY_DIR}"
