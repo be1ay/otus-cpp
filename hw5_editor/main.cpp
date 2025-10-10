@@ -2,6 +2,10 @@
 
 using namespace myeditor;
 
+ /**
+ * @brief View
+ *
+ */
 int main() {
     Controller c;
     c.newDocument();

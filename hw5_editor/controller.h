@@ -2,6 +2,10 @@
 #include "document.h"
 #include <memory>
 namespace myeditor{
+ /**
+ * @brief Controller
+ *
+ */
     class Controller {
         std::shared_ptr<Document> doc_;
     public:
