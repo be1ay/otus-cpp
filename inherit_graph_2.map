@@ -1,5 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,42,117,67"/>
-<area shape="rect" id="Node000001" href="$structis__container_3_01T_00_01std_1_1void__t_3_01typename_01T_1_1value__type_00_01decltype_07steeb3d57973e319fc49d955c8ad8263e5.html" title=" " alt="" coords="165,5,356,104"/>
-<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="131,52,165,52,165,57,131,57"/>
+<area shape="rect" id="Node000000" href="$classmyeditor_1_1IShapeBase.html" title=" " alt="" coords="5,31,171,56"/>
+<area shape="rect" id="Node000001" href="$classmyeditor_1_1Shape.html" title=" " alt="" coords="219,31,385,56"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="185,41,218,41,218,46,185,46"/>
+<area shape="rect" id="Node000002" href="$classmyeditor_1_1Circle.html" title=" " alt="" coords="447,5,611,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="399,30,447,24,447,30,399,35"/>
+<area shape="rect" id="Node000003" href="$classmyeditor_1_1Rectangle.html" title=" " alt="" coords="433,55,625,80"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="400,51,433,55,433,60,399,56"/>
 </map>

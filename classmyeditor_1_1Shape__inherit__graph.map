@@ -1,0 +1,9 @@
+<map id="myeditor::Shape&lt; T &gt;" name="myeditor::Shape&lt; T &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="105,79,272,104"/>
+<area shape="rect" id="Node000003" href="$classmyeditor_1_1Circle.html" title=" " alt="" coords="5,152,169,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,114,105,154,102,150,160,110"/>
+<area shape="rect" id="Node000004" href="$classmyeditor_1_1Rectangle.html" title=" " alt="" coords="194,152,386,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="218,110,275,150,272,154,215,114"/>
+<area shape="rect" id="Node000002" href="$classmyeditor_1_1IShapeBase.html" title=" " alt="" coords="106,5,271,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,44,191,79,186,79,186,44"/>
+</map>
