@@ -16,8 +16,10 @@ option(WITH_BOOST_TEST "Whether to build Boost test" ON)
 add_subdirectory(hw2_ip_filter)
 add_subdirectory(hw3_allocator)
 add_subdirectory(hw4_print_ip)
+add_subdirectory(hw5_editor)
 
-add_library(homework lib.cpp)
+add_library(homework lib.cpp ../hw5_editor/controller.cpp
+                             ../hw5_editor/document.cpp)
 
 target_include_directories(homework
     PRIVATE "${CMAKE_BINARY_DIR}"

@@ -8,6 +8,7 @@ set(TEST_SOURCES
     test_ip.cpp
     test_myallocator.cpp
     test_print_ip.cpp
+    test_myeditor.cpp
 )
 file(GLOB HW_DIRS LIST_DIRECTORIES true "${CMAKE_SOURCE_DIR}/hw*")
 
