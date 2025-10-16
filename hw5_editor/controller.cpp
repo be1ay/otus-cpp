@@ -3,7 +3,6 @@
 #include "view.h"
 
 namespace myeditor{
-    Controller::Controller() : doc_(std::make_shared<Document>()) {}
 
     void Controller::newDocument() {
         doc_ = std::make_shared<Document>();

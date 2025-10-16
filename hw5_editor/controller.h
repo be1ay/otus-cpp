@@ -11,7 +11,7 @@ namespace myeditor{
     class Controller {
         std::shared_ptr<Document> doc_;
     public:
-        Controller();
+        Controller() = default;
         void newDocument();
         void importDocument(const std::string& filename);
         void exportDocument(const std::string& filename);
