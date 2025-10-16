@@ -2,14 +2,9 @@
 #include <memory>
 #include <string>
 #include <iostream>
+#include "ishape.h"
+
 namespace myeditor{
-    // Абстрактный интерфейс для всех фигур
-    class IShapeBase {
-    public:
-        virtual ~IShapeBase() = default;
-        virtual void draw() const = 0;
-        virtual std::string name() const = 0;
-    };
 
     // Шаблонный класс примитива
     template<typename T>

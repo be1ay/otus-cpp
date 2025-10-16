@@ -1,8 +1,10 @@
 #pragma once
 #include "document.h"
 #include <memory>
+
 namespace myeditor{
- /**
+ class View;
+    /**
  * @brief Controller
  *
  */
@@ -16,7 +18,7 @@ namespace myeditor{
         template<typename ShapeType, typename... Args>
         void createShape(Args&&... args);
         void clearShapes();
-        void draw();
+        void draw(const View& view) const;
     };
 
     template<typename ShapeType, typename... Args>

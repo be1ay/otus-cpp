@@ -1,6 +1,7 @@
 #include "controller.h"
 #include <iostream>
-#include "shape.h"
+#include "view.h"
+
 namespace myeditor{
     Controller::Controller() : doc_(std::make_shared<Document>()) {}
 
@@ -22,7 +23,7 @@ namespace myeditor{
         std::cout << "removeAll shapes" << std::endl;
     }
 
-    void Controller::draw() {
-        doc_->drawAll();
+    void Controller::draw(const View& view) const {
+        view.render(doc_->shapes());
     }
 }//namespace myeditor

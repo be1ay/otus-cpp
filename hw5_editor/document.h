@@ -1,9 +1,8 @@
 #pragma once
-#include "shape.h"
+#include "ishape.h"
 #include <vector>
 #include <memory>
 namespace myeditor{
-    using IShapeBasePtr = std::shared_ptr<IShapeBase>;
  /**
  * @brief Model
  *
@@ -13,6 +12,8 @@ namespace myeditor{
     public:
         void addShape(const IShapeBasePtr& shape);
         void removeAll();
-        void drawAll() const;
+        const std::vector<IShapeBasePtr>& shapes() const {
+        return shapes_;
+        }
     };
 }//namespace myeditor

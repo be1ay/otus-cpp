@@ -8,9 +8,4 @@ namespace myeditor{
     void Document::removeAll() {
         shapes_.clear();
     }
-
-    void Document::drawAll() const {
-        for (const auto& s : shapes_)
-            s->draw();
-    }
 }//namespace myeditor
