@@ -1,0 +1,16 @@
+#define BOOST_TEST_MODULE GraphicEditorTest
+#include <boost/test/included/unit_test.hpp>
+#include "matrix.h"
+
+using namespace MyMatrix;
+
+BOOST_AUTO_TEST_CASE(check_matrix) {
+    Matrix<int, -1> matrix;
+    BOOST_CHECK_EQUAL(matrix.size(),0);
+    auto a = matrix[0][0];
+    BOOST_CHECK_EQUAL(a,-1);
+    BOOST_CHECK_EQUAL(matrix.size(),0);
+    matrix[100][100] = 314;
+    BOOST_CHECK_EQUAL(matrix[100][100],314);
+    BOOST_CHECK_EQUAL(matrix.size(),1);
+}
