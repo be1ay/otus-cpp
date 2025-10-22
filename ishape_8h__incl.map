@@ -1,7 +1,0 @@
-<map id="hw5_editor/ishape.h" name="hw5_editor/ishape.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,159,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="7,79,66,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,32,54,69,49,66,72,30"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="90,79,167,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="92,30,116,66,111,69,87,32"/>
-</map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['controller_2ecpp_0',['controller.cpp',['../controller_8cpp.html',1,'']]],
-  ['controller_2eh_1',['controller.h',['../controller_8h.html',1,'']]]
+  ['main_2ecpp_0',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['matrix_2eh_1',['matrix.h',['../matrix_8h.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ishapebase_0',['IShapeBase',['../classmyeditor_1_1IShapeBase.html',1,'myeditor']]]
+  ['rowproxy_0',['RowProxy',['../classMyMatrix_1_1Matrix_1_1RowProxy.html',1,'MyMatrix::Matrix']]]
 ];

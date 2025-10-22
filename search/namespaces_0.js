@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['myeditor_0',['myeditor',['../namespacemyeditor.html',1,'']]]
+  ['mymatrix_0',['MyMatrix',['../namespaceMyMatrix.html',1,'']]]
 ];

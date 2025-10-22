@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['myeditor_2',['myeditor',['../namespacemyeditor.html',1,'']]]
+  ['rowproxy_0',['rowproxy',['../classMyMatrix_1_1Matrix_1_1RowProxy.html',1,'MyMatrix::Matrix&lt; T, DefaultValue &gt;::RowProxy'],['../classMyMatrix_1_1Matrix_1_1RowProxy.html#ab1c93c6a0ce9134b426b1715875e8c92',1,'MyMatrix::Matrix::RowProxy::RowProxy()']]]
 ];

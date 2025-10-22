@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['circle_0',['Circle',['../classmyeditor_1_1Circle.html',1,'myeditor']]],
-  ['controller_1',['Controller',['../classmyeditor_1_1Controller.html',1,'myeditor']]]
+  ['cellproxy_0',['CellProxy',['../classMyMatrix_1_1Matrix_1_1RowProxy_1_1CellProxy.html',1,'MyMatrix::Matrix::RowProxy']]]
 ];
