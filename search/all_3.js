@@ -4,5 +4,6 @@ var searchData=
   ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
   ['matrix_2',['matrix',['../classMyMatrix_1_1Matrix.html',1,'MyMatrix::Matrix&lt; T, DefaultValue &gt;'],['../classMyMatrix_1_1Matrix.html#a68495dead69ab90f0d594ec4fe23aa8c',1,'MyMatrix::Matrix::Matrix()']]],
   ['matrix_2eh_3',['matrix.h',['../matrix_8h.html',1,'']]],
-  ['mymatrix_4',['MyMatrix',['../namespaceMyMatrix.html',1,'']]]
+  ['matrixn_4',['matrixn',['../classMyMatrix_1_1MatrixN.html',1,'MyMatrix::MatrixN&lt; T, DefaultValue, N &gt;'],['../classMyMatrix_1_1MatrixN.html#aa71f28f7703aa73e45ef094eb981b04c',1,'MyMatrix::MatrixN::MatrixN()']]],
+  ['mymatrix_5',['MyMatrix',['../namespaceMyMatrix.html',1,'']]]
 ];

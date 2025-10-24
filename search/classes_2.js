@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rowproxy_0',['RowProxy',['../classMyMatrix_1_1Matrix_1_1RowProxy.html',1,'MyMatrix::Matrix']]]
+  ['proxy_0',['Proxy',['../classMyMatrix_1_1MatrixN_1_1Proxy.html',1,'MyMatrix::MatrixN']]]
 ];

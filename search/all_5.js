@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rowproxy_0',['rowproxy',['../classMyMatrix_1_1Matrix_1_1RowProxy.html',1,'MyMatrix::Matrix&lt; T, DefaultValue &gt;::RowProxy'],['../classMyMatrix_1_1Matrix_1_1RowProxy.html#ab1c93c6a0ce9134b426b1715875e8c92',1,'MyMatrix::Matrix::RowProxy::RowProxy()']]]
+  ['proxy_0',['proxy',['../classMyMatrix_1_1MatrixN_1_1Proxy.html',1,'MyMatrix::MatrixN&lt; T, DefaultValue, N &gt;::Proxy'],['../classMyMatrix_1_1MatrixN_1_1Proxy.html#ad9d93cdb672ba4221d0138e34cb409a4',1,'MyMatrix::MatrixN::Proxy::Proxy()']]]
 ];
