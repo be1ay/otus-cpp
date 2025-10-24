@@ -7,7 +7,7 @@ project(Homeworks VERSION ${PROJECT_VESRION})
 
 configure_file(version.h.in version.h)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(WITH_BOOST_TEST "Whether to build Boost test" ON)

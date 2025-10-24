@@ -13,4 +13,14 @@ BOOST_AUTO_TEST_CASE(check_matrix) {
     matrix[100][100] = 314;
     BOOST_CHECK_EQUAL(matrix[100][100],314);
     BOOST_CHECK_EQUAL(matrix.size(),1);
+
+    MatrixN<int, -1, 3> matrix2;
+    BOOST_CHECK_EQUAL(matrix2.size(),0);
+    auto b = matrix2[0][0][0];
+    BOOST_CHECK_EQUAL(b,-1);
+    BOOST_CHECK_EQUAL(matrix2.size(),0);
+    matrix2[100][100][100] = 314;
+    BOOST_CHECK_EQUAL(matrix2[100][100][100],314);
+    BOOST_CHECK_EQUAL(matrix2.size(),1);
+
 }
