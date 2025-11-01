@@ -18,6 +18,7 @@ add_subdirectory(hw3_allocator)
 add_subdirectory(hw4_print_ip)
 add_subdirectory(hw5_editor)
 add_subdirectory(hw6_matrix)
+add_subdirectory(hw7_parser)
 
 add_library(homework lib.cpp hw5_editor/controller.cpp
                              hw5_editor/document.cpp)
