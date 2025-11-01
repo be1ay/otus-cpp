@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['cellproxy_0',['CellProxy',['../classMyMatrix_1_1Matrix_1_1RowProxy_1_1CellProxy.html#a9236de3821520af33638a1c8bfcce3f3',1,'MyMatrix::Matrix::RowProxy::CellProxy']]]
+  ['closebrace_0',['closeBrace',['../classCommandCollector.html#a6165ee7bcfb387be48d1ba18367cc6e5',1,'CommandCollector']]],
+  ['commandcollector_1',['CommandCollector',['../classCommandCollector.html#a2760880b341f5f1bd16ebb0e19e2ed98',1,'CommandCollector']]]
 ];

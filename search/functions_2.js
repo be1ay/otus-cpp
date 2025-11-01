@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['end_0',['end',['../classMyMatrix_1_1Matrix.html#ab7b4c45c864101532eb690b2681b72f5',1,'MyMatrix::Matrix::end()'],['../classMyMatrix_1_1MatrixN.html#ab96dae1cdf48d83ccd05cd2a11f09a78',1,'MyMatrix::MatrixN::end()']]]
+  ['finish_0',['finish',['../classCommandCollector.html#aff17ffe6f94d92a737808b4fcc44f8d3',1,'CommandCollector']]]
 ];

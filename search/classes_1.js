@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['matrix_0',['Matrix',['../classMyMatrix_1_1Matrix.html',1,'MyMatrix']]],
-  ['matrixn_1',['MatrixN',['../classMyMatrix_1_1MatrixN.html',1,'MyMatrix']]]
+  ['commandcollector_0',['CommandCollector',['../classCommandCollector.html',1,'']]],
+  ['consoleprinter_1',['ConsolePrinter',['../classConsolePrinter.html',1,'']]]
 ];
