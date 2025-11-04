@@ -10,6 +10,7 @@ set(TEST_SOURCES
     test_print_ip.cpp
     test_myeditor.cpp
     test_mymatrix.cpp
+    test_parser.cpp
 )
 file(GLOB HW_DIRS LIST_DIRECTORIES true "${CMAKE_SOURCE_DIR}/hw*")
 
