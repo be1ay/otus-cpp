@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vectorcommands_0',['VectorCommands',['../Observer_8h.html#a3c6f150157e26ff1f394b4d0d1b6f0f9',1,'Observer.h']]]
+  ['tryflushbysize_0',['tryFlushBySize',['../classCommandCollector.html#a6ddbe14a6828c82dddc7e4560ac7c9ae',1,'CommandCollector']]]
 ];

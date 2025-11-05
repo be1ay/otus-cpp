@@ -75,11 +75,13 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">CommandCollector.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 <code>#include &quot;<a class="el" href="Observer_8h_source.html">Observer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="BulkNotifier_8h_source.html">BulkNotifier.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -87,22 +89,24 @@ Include dependency graph for CommandCollector.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="CommandCollector_8h__incl.png" border="0" usemap="#ahw7__parser_2CommandCollector_8h" alt=""/></div>
 <map name="ahw7__parser_2CommandCollector_8h" id="ahw7__parser_2CommandCollector_8h">
-<area shape="rect" title=" " alt="" coords="5,5,243,31"/>
-<area shape="rect" title=" " alt="" coords="20,79,87,104"/>
-<area shape="poly" title=" " alt="" coords="114,33,76,71,72,67,110,29"/>
-<area shape="rect" href="Observer_8h.html" title=" " alt="" coords="74,152,166,177"/>
-<area shape="poly" title=" " alt="" coords="126,31,123,138,118,138,121,31"/>
-<area shape="rect" href="BulkNotifier_8h.html" title=" " alt="" coords="170,79,281,104"/>
-<area shape="poly" title=" " alt="" coords="142,28,199,68,196,73,139,33"/>
-<area shape="rect" title=" " alt="" coords="46,225,109,251"/>
-<area shape="poly" title=" " alt="" coords="115,179,93,215,89,212,111,176"/>
-<area shape="rect" title=" " alt="" coords="133,225,192,251"/>
-<area shape="poly" title=" " alt="" coords="129,176,151,212,147,215,125,179"/>
-<area shape="poly" title=" " alt="" coords="210,106,150,147,147,142,207,102"/>
-<area shape="rect" title=" " alt="" coords="191,152,268,177"/>
-<area shape="poly" title=" " alt="" coords="229,104,231,138,225,139,223,104"/>
-<area shape="rect" title=" " alt="" coords="292,152,377,177"/>
-<area shape="poly" title=" " alt="" coords="244,102,307,142,304,147,241,106"/>
+<area shape="rect" title=" " alt="" coords="56,5,293,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,72,104"/>
+<area shape="poly" title=" " alt="" coords="154,33,74,75,72,70,152,28"/>
+<area shape="rect" title=" " alt="" coords="96,79,176,104"/>
+<area shape="poly" title=" " alt="" coords="171,32,151,68,146,65,166,30"/>
+<area shape="rect" href="Observer_8h.html" title=" " alt="" coords="163,152,255,177"/>
+<area shape="poly" title=" " alt="" coords="180,30,206,138,201,139,175,32"/>
+<area shape="rect" href="BulkNotifier_8h.html" title=" " alt="" coords="259,79,370,104"/>
+<area shape="poly" title=" " alt="" coords="198,28,281,70,279,75,196,33"/>
+<area shape="rect" title=" " alt="" coords="135,225,198,251"/>
+<area shape="poly" title=" " alt="" coords="205,179,183,215,178,212,200,176"/>
+<area shape="rect" title=" " alt="" coords="223,225,281,251"/>
+<area shape="poly" title=" " alt="" coords="219,176,240,212,236,215,214,179"/>
+<area shape="poly" title=" " alt="" coords="299,106,239,147,236,142,296,102"/>
+<area shape="rect" title=" " alt="" coords="280,152,357,177"/>
+<area shape="poly" title=" " alt="" coords="318,104,320,138,315,139,313,104"/>
+<area shape="rect" title=" " alt="" coords="381,152,467,177"/>
+<area shape="poly" title=" " alt="" coords="334,102,396,142,393,147,331,106"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -122,7 +126,41 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCommandCollector.html">CommandCollector</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a6f018c511ec426a55c50ffc5aa2a4abc" id="r_a6f018c511ec426a55c50ffc5aa2a4abc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CommandCollector_8h.html#a6f018c511ec426a55c50ffc5aa2a4abc">processCommands</a> (std::istream &amp;in, <a class="el" href="classCommandCollector.html">CommandCollector</a> &amp;collector)</td></tr>
+<tr class="separator:a6f018c511ec426a55c50ffc5aa2a4abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a6f018c511ec426a55c50ffc5aa2a4abc" name="a6f018c511ec426a55c50ffc5aa2a4abc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f018c511ec426a55c50ffc5aa2a4abc">&#9670;&#160;</a></span>processCommands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void processCommands </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classCommandCollector.html">CommandCollector</a> &amp;&#160;</td>
+          <td class="paramname"><em>collector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
