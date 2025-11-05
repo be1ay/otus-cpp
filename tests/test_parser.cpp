@@ -121,4 +121,18 @@ BOOST_AUTO_TEST_CASE(EndBlockTest) {
     BOOST_CHECK_EQUAL(obs->received.size(), 1);
     BOOST_CHECK((obs->received[0].commands == VectorCommands{"cmd1","cmd2"}));
 }
+BOOST_AUTO_TEST_CASE(StringStreamTest)
+{
+    BulkNotifier notifier;
+    auto obs = std::make_shared<TestObserver>();
+    notifier.addObserver(obs);
+    CommandCollector collector(2, notifier);
+    std::stringstream cmd;
+    cmd << "cmd1\ncmd2\ncmd3";
+    processCommands(cmd,collector);
+
+    BOOST_CHECK_EQUAL(obs->received.size(), 2);
+    BOOST_CHECK((obs->received[0].commands == VectorCommands{"cmd1","cmd2"}));
+    BOOST_CHECK((obs->received[1].commands == VectorCommands{"cmd3"}));
+} 
 BOOST_AUTO_TEST_SUITE_END()

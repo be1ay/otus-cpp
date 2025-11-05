@@ -24,24 +24,7 @@ int main(int argc, char** argv) {
 
     CommandCollector collector(N, notifier);
 
-    std::string command;
-    while (std::cin >> command) {
-        if (command == "EOF") break;
-
-        if (command == "{") {
-            collector.openBrace();
-        }
-        else if (command == "}") {
-            collector.closeBrace();
-        }
-        else {
-            collector.addCommand(command);
-            collector.tryFlushBySize();
-        }
-    }
-
-    // при завершении ввода — если не внутри блока, отправляем остаток; иначе игнорируем остаток
-    collector.finish();
-
+    processCommands(std::cin,collector);
+    
     return 0;
 }

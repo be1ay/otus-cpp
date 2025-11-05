@@ -1,6 +1,7 @@
 #pragma once
 
 #include <chrono>
+#include <iostream>
 #include "Observer.h"
 #include "BulkNotifier.h"
 
@@ -38,10 +39,14 @@ public:
 
     // закрыть динамический блок (встретили '}')
     void closeBrace() {
-        if (braceCount_ > 0) --braceCount_;
+        --braceCount_;
         if (braceCount_ == 0) {
             // завершили динамический блок — отправляем содержимое
             flushIfAny();
+        }
+        if (braceCount_ < 0) {
+            std::cerr << "[WARN] Unmatched closing brace '}' ignored\n";;
+            braceCount_=0;
         }
     }
 
@@ -86,3 +91,23 @@ private:
     bool firstCommandInBlock_ = true;
     std::string firstTime_;
 };
+
+void processCommands(std::istream& in, CommandCollector& collector)
+{
+    std::string command;
+    while (in >> command) {
+        if (command == "EOF") break;
+
+        if (command == "{") {
+            collector.openBrace();
+        }
+        else if (command == "}") {
+            collector.closeBrace();
+        }
+        else {
+            collector.addCommand(command);
+            collector.tryFlushBySize();
+        }
+    }
+    collector.finish();
+}
