@@ -6,5 +6,5 @@ using VectorCommands = std::vector<std::string>;
 
 struct Observer {
     virtual ~Observer() = default;
-    virtual void onBulk(const VectorCommands& commands, const std::string& timestamp) = 0;
+    virtual void onBulk(const VectorCommands& commands) = 0;
 };

@@ -16,15 +16,21 @@ int main(int argc, char** argv) {
 
     BulkNotifier notifier;
     auto console = std::make_shared<ConsolePrinter>();
-    auto filelog = std::make_shared<FileLogger>();
+    //auto filelog = std::make_shared<FileLogger>();
+    
 
     // подписчики — НЕ зависят друг от друга и от collector
     notifier.addObserver(console);
-    notifier.addObserver(filelog);
+    
 
     CommandCollector collector(N, notifier);
 
+    auto fileLogger = std::make_shared<FileLogger>([&collector]() {
+        return collector.getFirstTime();
+    });
+    notifier.addObserver(fileLogger);
+
     processCommands(std::cin,collector);
-    
+
     return 0;
 }

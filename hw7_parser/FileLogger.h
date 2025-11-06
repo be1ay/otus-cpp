@@ -1,13 +1,17 @@
 #pragma once
 
 #include <fstream>
+#include <functional>
 #include "Observer.h"
 
 // --- File logger observer ---
 class FileLogger : public Observer {
 public:
-    void onBulk(const VectorCommands& commands, const std::string& timestamp) override {
+    explicit FileLogger(std::function<std::string()> timeProvider)  
+        : timeProvider_(std::move(timeProvider)) {}
+    void onBulk(const VectorCommands& commands) override {
         if (commands.empty()) return;
+        std::string timestamp = timeProvider_(); 
         std::string filename = "bulk" + timestamp + ".log";
         std::ofstream ofs(filename);
         if (!ofs) return;
@@ -18,4 +22,6 @@ public:
         }
         ofs << std::endl;
     }
+    private:
+    std::function<std::string()> timeProvider_;
 };

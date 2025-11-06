@@ -14,9 +14,9 @@ public:
         observers_.erase(std::remove(observers_.begin(), observers_.end(), obs), observers_.end());
     }
 
-    void notify(const VectorCommands& commands, const std::string& timestamp) const {
+    void notify(const VectorCommands& commands) const {
         for (auto &obs : observers_) {
-            if (obs) obs->onBulk(commands, timestamp);
+            if (obs) obs->onBulk(commands);
         }
     }
 

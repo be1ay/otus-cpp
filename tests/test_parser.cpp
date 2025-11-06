@@ -8,12 +8,11 @@
 struct TestObserver : public Observer { //просто сохраняет в память
     struct Bulk {
         VectorCommands commands;
-        std::string timestamp;
     };
     std::vector<Bulk> received;
 
-    void onBulk(const VectorCommands& commands, const std::string& timestamp) override {
-        received.push_back({commands, timestamp});
+    void onBulk(const VectorCommands& commands) override {
+        received.push_back({commands});
     }
 };
 

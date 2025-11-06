@@ -21,9 +21,8 @@ public:
 
     // вызываем при чтении обычной команды (не { и не })
     void addCommand(const std::string& cmd) {
-        if (firstCommandInBlock_) {
+        if (commands_.empty()) {
             firstTime_ = currentTimestamp();
-            firstCommandInBlock_ = false;
         }
         commands_.push_back(cmd);
     }
@@ -64,23 +63,20 @@ public:
         } else {
             // блок игнорируется.
             commands_.clear();
-            firstCommandInBlock_ = true;
         }
     }
+    std::string getFirstTime() const { return firstTime_; }
 
 private:
     void flushIfAny() {
         if (commands_.empty()) {
-            firstCommandInBlock_ = true;
             return;
         }
         VectorCommands bulk = std::move(commands_);
-        std::string timestamp = firstTime_;
         commands_.clear();
-        firstCommandInBlock_ = true;
+        
+        notifier_.notify(bulk);
         firstTime_.clear();
-
-        notifier_.notify(bulk, timestamp);
     }
 
 private:
@@ -88,7 +84,6 @@ private:
     BulkNotifier& notifier_;
     VectorCommands commands_;
     int braceCount_ = 0;
-    bool firstCommandInBlock_ = true;
     std::string firstTime_;
 };
 
