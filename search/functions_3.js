@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.cpp']]]
+  ['getfirsttime_0',['getFirstTime',['../classCommandCollector.html#a0135c35f5335167e27834daa07f3b4fa',1,'CommandCollector']]]
 ];

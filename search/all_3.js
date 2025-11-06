@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['filelogger_0',['FileLogger',['../classFileLogger.html',1,'']]],
+  ['filelogger_0',['filelogger',['../classFileLogger.html',1,'FileLogger'],['../classFileLogger.html#a81c90111d2a6c0dda59e29d87df4d565',1,'FileLogger::FileLogger()']]],
   ['filelogger_2eh_1',['FileLogger.h',['../FileLogger_8h.html',1,'']]],
   ['finish_2',['finish',['../classCommandCollector.html#aff17ffe6f94d92a737808b4fcc44f8d3',1,'CommandCollector']]]
 ];

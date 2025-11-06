@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7eobserver_0',['~Observer',['../structObserver.html#a37824643eeaef086de17bba2717d865a',1,'Observer']]]
+  ['tryflushbysize_0',['tryFlushBySize',['../classCommandCollector.html#a6ddbe14a6828c82dddc7e4560ac7c9ae',1,'CommandCollector']]]
 ];

@@ -1,11 +1,13 @@
 <map id="hw7_parser/FileLogger.h" name="hw7_parser/FileLogger.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="6,5,185,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="57,5,235,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,79,79,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,33,61,69,57,66,84,29"/>
-<area shape="rect" id="Node000003" href="$Observer_8h.html" title=" " alt="" coords="103,79,195,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="106,29,134,66,130,69,102,33"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="75,152,137,177"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="144,106,122,142,118,139,139,103"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="162,152,221,177"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="158,103,180,139,175,142,153,106"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,33,72,73,69,68,128,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="103,79,189,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,31,149,65,143,65,143,31"/>
+<area shape="rect" id="Node000004" href="$Observer_8h.html" title=" " alt="" coords="213,79,305,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="166,28,231,69,228,74,163,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="185,152,248,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="255,106,233,142,228,139,250,103"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="273,152,331,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="269,103,290,139,286,142,264,106"/>
 </map>

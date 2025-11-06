@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tryflushbysize_0',['tryFlushBySize',['../classCommandCollector.html#a6ddbe14a6828c82dddc7e4560ac7c9ae',1,'CommandCollector']]]
+  ['removeobserver_0',['removeObserver',['../classBulkNotifier.html#af8c59cfb9f4d7b0ef8f4870de21e46cd',1,'BulkNotifier']]]
 ];

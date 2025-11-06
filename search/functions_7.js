@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['removeobserver_0',['removeObserver',['../classBulkNotifier.html#af8c59cfb9f4d7b0ef8f4870de21e46cd',1,'BulkNotifier']]]
+  ['processcommands_0',['processCommands',['../CommandCollector_8h.html#a6f018c511ec426a55c50ffc5aa2a4abc',1,'CommandCollector.h']]]
 ];
