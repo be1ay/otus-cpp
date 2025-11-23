@@ -7,8 +7,7 @@ else()
 endif()
 
 find_package(Boost REQUIRED COMPONENTS filesystem system program_options)
-target_include_directories(bayan PRIVATE ${Boost_INCLUDE_DIRS})
-target_link_libraries(bayan PRIVATE ${Boost_LIBRARIES})
+target_link_libraries(bayan PRIVATE Boost::filesystem Boost::system Boost::program_options)
 
 
 
