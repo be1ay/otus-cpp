@@ -161,7 +161,7 @@ int main(int argc, char* argv[])
             std::cout << "  " << f.path << "\n";
         }
     }
-std::cout<<"-------------------------------------------" <<std::endl;
+    std::cout<<"-------------------------------------------" <<std::endl;
 
     // Для union-find нужны две карты: ранги и родители
     boost::unordered_map<fs::path, int> rank_map;
@@ -175,110 +175,45 @@ std::cout<<"-------------------------------------------" <<std::endl;
         boost::make_assoc_property_map(rank_map),
         boost::make_assoc_property_map(parent_map)
     );
-    
+
     std::vector<std::set<fs::path>> duplicates;
 
     // 1. Инициализация множеств только для кандидатов
-for (auto& [size, files] : size_groups) {
-    if (files.size() < 2) continue; // уникальные размеры отбрасываем
-    for (auto& f : files) {
-        ds.make_set(f.path);
-    }
-}
-
-// 2. Сравнение файлов внутри каждой группы
-for (auto& [size, files] : size_groups) {
-    if (files.size() < 2) continue;
-    for (size_t i = 0; i < files.size(); ++i) {
-        for (size_t j = i + 1; j < files.size(); ++j) {
-            if (compare_files(files[i], files[j], blockSize, algo)) {
-                ds.union_set(files[i].path, files[j].path);
-            }
-        }
-    }
-}
-
-// 3. Сбор групп дубликатов
-boost::unordered_map<fs::path, std::set<fs::path>> groups;
-for (auto& [size, files] : size_groups) {
-    if (files.size() < 2) continue;
-    for (auto& f : files) {
-        fs::path root = ds.find_set(f.path);
-        groups[root].insert(f.path);
-    }
-}
-
-// 4. Вывод
-for (auto& [root, group] : groups) {
-    for (auto& f : group) {
-        std::cout << f.string() << "\n";
-    }
-    std::cout << "\n";
-}
-
-#if 0
     for (auto& [size, files] : size_groups) {
         if (files.size() < 2) continue; // уникальные размеры отбрасываем
-         
-        for (size_t i = 0; i < files.size(); ++i)
-        {
-            for (size_t j = i + 1; j < files.size(); ++j)
-            {
-                bool equal = true;
-                size_t block_index = 0;
-                while(equal){
-                    read_block(files.at(i),block_index,blockSize,algo);
-                    read_block(files.at(j),block_index,blockSize,algo);
-                    if(files.at(i).hashes.at(block_index)!=files.at(j).hashes.at(block_index))
-                        equal = false;
-                    ++block_index;
-                    if (block_index * blockSize >= size) break;
-
-                }
-                if (equal) {
-                    bool added = false;
-                    // ищем группу, где уже есть i или j
-                    for (auto& group : duplicates) {
-                        if (group.count(files[i].path) || group.count(files[j].path)) {
-                            group.insert(files[i].path);
-                            group.insert(files[j].path);
-                            added = true;
-                            break;
-                        }
-                    }
-                    if (!added) {
-                        // создаём новую группу
-                        std::set<fs::path> newgroup;
-                        newgroup.insert(files[i].path);
-                        newgroup.insert(files[j].path);
-                        duplicates.push_back(std::move(newgroup));
-                    }
+        for (auto& f : files) {
+            ds.make_set(f.path);
         }
+    }
 
-
+    // 2. Сравнение файлов внутри каждой группы
+    for (auto& [size, files] : size_groups) {
+        if (files.size() < 2) continue;
+        for (size_t i = 0; i < files.size(); ++i) {
+            for (size_t j = i + 1; j < files.size(); ++j) {
+                if (compare_files(files[i], files[j], blockSize, algo)) {
+                    ds.union_set(files[i].path, files[j].path);
+                }
             }
         }
-      //  for(const auto&el:files)
-        //    std::cout<< el.path <<std::endl;
     }
-#endif
-    #if 0
-    std::string root = scandirs[0]; //TMP
 
-
-
-    for (auto& entry : fs::recursive_directory_iterator(root)) {
-        if (fs::is_regular_file(entry)) {
-            std::size_t sz = fs::file_size(entry.path());
-            size_groups[sz].push_back(entry.path().string());
+    // 3. Сбор групп дубликатов
+    boost::unordered_map<fs::path, std::set<fs::path>> groups;
+    for (auto& [size, files] : size_groups) {
+        if (files.size() < 2) continue;
+        for (auto& f : files) {
+            fs::path root = ds.find_set(f.path);
+            groups[root].insert(f.path);
         }
     }
-    for (auto& kv : size_groups) {
-        if (kv.second.size() < 2) continue; // уникальные размеры отбрасываем
 
-        for(const auto&el:kv.second)
-            std::cout<< el <<std::endl;
+    // 4. Вывод
+    for (auto& [root, group] : groups) {
+        for (auto& f : group) {
+            std::cout << f.string() << "\n";
+        }
+        std::cout << "\n";
     }
-#endif
     return 0;
 }
