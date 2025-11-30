@@ -153,7 +153,7 @@ int main(int argc, char* argv[])
             }
         }
     }
-
+#if 0
     // вывод результата
     for (const auto& [size, files] : size_groups) {
         std::cout << "Размер: " << size << " байт\n";
@@ -161,6 +161,7 @@ int main(int argc, char* argv[])
             std::cout << "  " << f.path << "\n";
         }
     }
+#endif
     std::cout<<"-------------------------------------------" <<std::endl;
 
     // Для union-find нужны две карты: ранги и родители
@@ -209,11 +210,16 @@ int main(int argc, char* argv[])
     }
 
     // 4. Вывод
-    for (auto& [root, group] : groups) {
-        for (auto& f : group) {
-            std::cout << f.string() << "\n";
+    for (auto& [root, group] : groups)
+    {
+        if (group.size() > 1)
+        {
+            for (auto& f : group)
+            {
+                std::cout << f.string() << "\n";
+            }
+            std::cout << "\n";
         }
-        std::cout << "\n";
     }
     return 0;
 }
