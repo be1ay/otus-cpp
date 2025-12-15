@@ -20,6 +20,7 @@ add_subdirectory(hw5_editor)
 add_subdirectory(hw6_matrix)
 add_subdirectory(hw7_parser)
 add_subdirectory(hw8_duplicate_files)
+add_subdirectory(hw9_asyncCommands)
 
 add_library(homework lib.cpp hw5_editor/controller.cpp
                              hw5_editor/document.cpp)
