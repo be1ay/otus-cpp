@@ -10,13 +10,13 @@
 #include "CommandCollector.h"
 #include "Dispatcher.h"
 
-// Context struct holds collector and leftover partial data
+// Context
 struct AsyncContext {
     AsyncContext(std::size_t bulk_size, Dispatcher& dispatcher)
         : collector(static_cast<int>(bulk_size), dispatcher) {}
 
     CommandCollector collector;
-    std::string leftover; // partial input (no '\n')
+    std::string leftover; // input (no '\n')
 };
 
 // Global manager
@@ -24,10 +24,10 @@ namespace {
     std::mutex g_mutex;
     std::unordered_map<async_handle_t, std::shared_ptr<AsyncContext>> g_contexts;
     Dispatcher* g_dispatcher = nullptr;
-    std::unique_ptr<Dispatcher> g_dispatcher_owner; // owns the dispatcher if created here
+    std::unique_ptr<Dispatcher> g_dispatcher_owner;
 
-    // helper to ensure dispatcher started
-    void ensure_dispatcher_started() {
+    // dispatcher started
+    void start_dispatcher() {
         if (!g_dispatcher) {
             // create dispatcher and start it
             g_dispatcher_owner = std::make_unique<Dispatcher>();
@@ -36,8 +36,8 @@ namespace {
         }
     }
 
-    // helper to maybe stop dispatcher when no contexts remain
-    void maybe_stop_dispatcher() {
+    // stop dispatcher
+    void stop_dispatcher() {
         if (g_dispatcher && g_contexts.empty()) {
             g_dispatcher->stop();
             g_dispatcher_owner.reset();
@@ -46,15 +46,15 @@ namespace {
     }
 }
 
-// create a new context and return opaque handle
-async_handle_t connect_async(std::size_t bulk_size) {
+// create a new context and return handle
+async_handle_t connect(std::size_t bulk_size) {
     try {
         std::lock_guard<std::mutex> lg(g_mutex);
-        ensure_dispatcher_started();
+        start_dispatcher();
         auto ctx = std::make_shared<AsyncContext>(bulk_size, *g_dispatcher);
         // use pointer value as handle
         async_handle_t handle = reinterpret_cast<async_handle_t>(ctx.get());
-        // store shared_ptr in map so it remains alive
+        // store shared_ptr in map - alive
         g_contexts[handle] = ctx;
         return handle;
     } catch (const std::exception& ex) {
@@ -64,7 +64,7 @@ async_handle_t connect_async(std::size_t bulk_size) {
 }
 
 // process buffer: accumulate leftover, cut lines
-void receive_async(async_handle_t handle, const char* data, std::size_t size) {
+void receive(async_handle_t handle, const char* data, std::size_t size) {
     if (!handle || !data || size == 0) return;
 
     std::shared_ptr<AsyncContext> ctx;
@@ -77,11 +77,6 @@ void receive_async(async_handle_t handle, const char* data, std::size_t size) {
         }
         ctx = it->second;
     }
-
-    // Now operate on ctx WITHOUT holding global mutex.
-    // According to spec, calls with same context are from same thread,
-    // but we'll be safe: protect ctx->leftover with a small mutex if needed.
-    // For simplicity and performance, assume same-thread calls for same handle.
 
     // append incoming data
     ctx->leftover.append(data, data + size);
@@ -120,7 +115,7 @@ void receive_async(async_handle_t handle, const char* data, std::size_t size) {
 }
 
 // finish and destroy context
-void disconnect_async(async_handle_t handle) {
+void disconnect(async_handle_t handle) {
     if (!handle) return;
 
     std::shared_ptr<AsyncContext> ctx;
@@ -134,10 +129,10 @@ void disconnect_async(async_handle_t handle) {
         g_contexts.erase(it);
     }
 
-    // call finish (treat as EOF)
+    // call finish
     ctx->collector.finish();
 
-    // allow dispatcher to stop if no contexts remain
+    // stop if no contexts remain
     std::lock_guard<std::mutex> lg(g_mutex);
-    maybe_stop_dispatcher();
+    stop_dispatcher();
 }

@@ -7,11 +7,11 @@ extern "C" {
 
 typedef void* async_handle_t;
 
-async_handle_t connect_async(std::size_t bulk_size);
+async_handle_t connect(std::size_t bulk_size);
 
-void receive_async(async_handle_t handle, const char* data, std::size_t size);
+void receive(async_handle_t handle, const char* data, std::size_t size);
 
-void disconnect_async(async_handle_t handle);
+void disconnect(async_handle_t handle);
 
 #ifdef __cplusplus
 }
