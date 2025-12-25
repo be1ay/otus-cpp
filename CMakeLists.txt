@@ -22,6 +22,7 @@ add_subdirectory(hw7_parser)
 add_subdirectory(hw8_duplicate_files)
 add_subdirectory(hw9_asyncCommands)
 add_subdirectory(hw10_bulk_server)
+add_subdirectory(hw11_join_server)
 
 add_library(homework lib.cpp hw5_editor/controller.cpp
                              hw5_editor/document.cpp)
