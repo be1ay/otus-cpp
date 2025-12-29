@@ -43,7 +43,7 @@ std::deque<std::string> writeQueue_;
 
 void Session::writeResponse(const std::string& data) {
     bool writing = !writeQueue_.empty();
-    writeQueue_.push_back(data);
+    writeQueue_.push_back("< " + data);
 
     if (!writing)
         doWrite();
