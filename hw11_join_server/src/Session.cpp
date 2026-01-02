@@ -1,10 +1,10 @@
 #include "Session.h"
 #include <iostream>
 #include <deque>
-#include "Database.h"
+
 using boost::asio::ip::tcp;
 
-Session::Session(tcp::socket socket, std::shared_ptr<Database> db) 
+Session::Session(tcp::socket socket, std::shared_ptr<IDatabase> db) 
 : socket_(std::move(socket)), db_(db)
 {
 }

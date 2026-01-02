@@ -1,8 +1,8 @@
 #pragma once
 
 #include <boost/asio.hpp>
+#include "IDatabase.h"
 
-class Database;
 
 class Server {
 public:
@@ -12,5 +12,5 @@ private:
     void doAccept();
     boost::asio::io_context& io_;
     boost::asio::ip::tcp::acceptor acceptor_;
-    std::shared_ptr<Database> db_;
+    std::shared_ptr<IDatabase> db_;
 };

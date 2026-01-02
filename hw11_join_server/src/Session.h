@@ -2,12 +2,11 @@
 
 #include <boost/asio.hpp>
 #include <string>
-
-class Database;
+#include "IDatabase.h"
 
 class Session : public std::enable_shared_from_this<Session> {
 public:
-    Session(boost::asio::ip::tcp::socket socket, std::shared_ptr<Database> db);
+    Session(boost::asio::ip::tcp::socket socket, std::shared_ptr<IDatabase> db);
 
     void start();
 
@@ -27,5 +26,5 @@ private:
 
     boost::asio::ip::tcp::socket socket_;
     boost::asio::streambuf buffer_;
-    std::shared_ptr<Database> db_;
+    std::shared_ptr<IDatabase> db_;
 };
